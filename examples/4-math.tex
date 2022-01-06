@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+Using \$ for inline formula $ f(x)=x^2 $ or \( f(x) = \frac{1}{1-x} \)
+
+Using equation for single equation
+\begin{equation}
+  f(x) = x^2 \text{ with equation numbering}
+\end{equation}
+
+(asterisk for turning-off auto numbering)
+\begin{equation*}
+  f(x) = x^2 \mbox{ without equation numbering}
+\end{equation*}
+\begin{equation}
+  f(x) = x^2 \mbox{ alternative: without equation numbering}\nonumber
+\end{equation}
+
+Using align for automatic alignment
+\begin{align*}
+  x &= 1\\
+  f(x) &= 1^2 = 1
+\end{align*}
+
+Using integrals, fractions
+\begin{align*}
+  f(x) &= \frac{1}{1-x}\\
+  g(x) &= \int^a_b x^2 dx
+\end{align*}
+
+Using matrix with scaled brackets
+\begin{equation*}
+\left[
+\begin{matrix}
+1 & 0\\
+0 & 1
+\end{matrix}
+\right]
+\end{equation*}
+
+Using partitioned statements
+\[
+\sum_{n=1}^{\infty}1+x+x^2+\cdots+x^n =
+  \begin{cases}
+    \frac{1}{1-x}, & \text{if \(x<1\)}\\
+    \text{divergent}, & \text{if \(x\geq1\)}
+  \end{cases}
+\]
+
+\end{document}

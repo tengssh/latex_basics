@@ -1,0 +1,72 @@
+\documentclass{article}
+\setcounter{tocdepth}{1} % Show sections
+%\setcounter{tocdepth}{2} % + subsections
+%\setcounter{tocdepth}{3} % + subsubsections (default)
+%\setcounter{tocdepth}{4} % + paragraphs
+%\setcounter{tocdepth}{5} % + subparagraphs
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\section{Section}
+Dummy text
+\subsection{Subsection}
+Dummy text
+\paragraph{Paragraph}
+Dummy text
+\subparagraph{Subparagraph}
+Dummy text
+
+\addtocontents{toc}{\setcounter{tocdepth}{5}} % set tocdepth individually
+\section{Another Section}
+Dummy text
+\subsection{Subsection}
+Dummy text
+\paragraph{Paragraph}
+Dummy text
+\subparagraph{Subparagraph}
+Dummy text
+
+\section{Itemized and enumerated lists}
+\paragraph{Itemized list}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\item Item 3
+\end{itemize}
+\paragraph{Enumerated list}
+\begin{enumerate}
+\item Item 1
+\item Item 2
+\item Item 3
+\end{enumerate}
+
+\section{Tables}
+\paragraph{Table}
+\begin{tabular}{| l | c | r |}
+\hline
+A & B & C\\
+\hline
+L & C & R\\
+left & center & right\\
+\hline
+1 & 2 & 3\\
+\hline
+\end{tabular}
+
+\begin{figure}
+  \caption{Dummy figure}
+\end{figure}
+
+\begin{table}
+  \caption{Dummy table}
+\end{table}
+\newpage
+
+\begin{appendix}
+  \listoffigures
+  \listoftables
+\end{appendix}
+
+\end{document}

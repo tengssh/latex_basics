@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\begin{document}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{LaTeX.png}
+  \caption{LaTeX figure}
+  \label{fig:LaTeX1}
+\end{figure}
+Figure \ref{fig:LaTeX1} is a LaTeX figure.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{1}
+    \label{fig:first}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{2}
+    \label{fig:second}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{3}
+    \label{fig:third}
+  \end{subfigure}
+  \caption{Three subfigures}
+  \label{fig:LaTeX2}
+\end{figure}
+Figure \ref{fig:third} is the subfigure \subref{fig:third} of Figure \ref{fig:LaTeX2}.
+
+\begin{figure}[h!]
+  \centering
+  \hfill
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{1}
+    \label{fig:first}
+  \end{subfigure}
+  \hspace\fill
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{2}
+    \label{fig:second}
+  \end{subfigure}
+  \hspace{-1cm}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{3}
+    \label{fig:third}
+  \end{subfigure}
+  \caption{Three subfigures}
+  \label{fig:LaTeX3}
+\end{figure}
+Use hfill to fill spaces in between.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[][3cm][b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{1}
+    \label{fig:first}
+  \end{subfigure}
+  \begin{subfigure}[][3cm][c]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{2}
+    \label{fig:second}
+  \end{subfigure}
+  \hspace{-1cm}
+  \begin{subfigure}[][3cm][t]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{3}
+    \label{fig:third}
+  \end{subfigure}
+  \caption{Three subfigures}
+  \label{fig:LaTeX4}
+\end{figure}
+Increase the heights of subfigures, then the vertical positions can also be changed.
+
+\begin{figure}[hb!]
+  \centering
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{1}
+  \end{subfigure}
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{2}
+  \end{subfigure}
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{3}
+  \end{subfigure}
+  \caption{Subfigures with page break}
+  \label{fig:LaTeX5}
+\end{figure}
+\begin{figure}[h!]
+  \ContinuedFloat
+  \centering
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{4}
+  \end{subfigure}
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{5}
+  \end{subfigure}
+  \begin{subfigure}[b]{\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{6}
+  \end{subfigure}
+  \caption{Subfigures with page break}
+  \label{fig:LaTeX5}
+\end{figure}
+Use ContinuedFloat to have a page break in the middle of the subfigures.
+
+\end{document}

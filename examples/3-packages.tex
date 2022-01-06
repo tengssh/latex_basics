@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{margin=2cm, includefoot, footskip=30pt}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{tikz}
+
+\title{LaTeX packages}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+\doublespacing
+\tableofcontents
+\singlespacing
+\newpage
+
+\newgeometry{a4paper, total={6in, 8in}}
+\section{Section}
+Dummy text
+\subsection{Subsection}
+Dummy text
+\section{Another Section}
+Dummy text
+
+This part can be used with package `amsmath'
+\begin{equation*}
+  f(x) = x^2
+\end{equation*}
+
+This part can be used with package `graphicx`
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{LaTeX.png}
+  \caption{LaTeX figure}
+  \label{fig:LaTeX}
+\end{figure}
+
+For subfigures, package `subcaption` is needed
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{LaTeX.png}
+    \caption{2}
+  \end{subfigure}
+  \caption{Two subfigures}
+  \label{fig:LaTeX2}
+\end{figure}
+
+\newpage
+\section{Tables}
+\paragraph{Normal table}
+\begin{tabular}{| l | c | r |}
+\hline
+A & B & C\\
+\hline
+L & C & R\\
+left & center & right\\
+\hline
+1 & 2 & 3\\
+\hline
+\end{tabular}
+
+\paragraph{booktabs}
+\begin{tabular}{l  c  r}
+\toprule
+A & B & C\\
+\midrule
+L & C & R\\
+left & center & right\\
+1 & 2 & 3\\
+\bottomrule
+\end{tabular}
+
+\section{Drawing}
+\begin{center}
+  \begin{tikzpicture}
+    \draw [color=black, fill=green] (-1, 1) circle(.5);
+    \draw [color=black, fill=green] (1, 1) circle(.5);
+    \draw [color=black, fill=green] (1, -1) circle(.5);
+    \draw [color=black, fill=green] (-1, -1) circle(.5);
+    \draw [color=black, fill=red] (0, 1) circle(.1);
+    \draw [color=black, fill=red] (1, 0) circle(.1);
+    \draw [color=black, fill=red] (0, -1) circle(.1);
+    \draw [color=black, fill=red] (-1, 0) circle(.1);
+    \draw [color=black, fill=blue] (0, 0) circle(.25);
+    \draw [ultra thick] (-1,1) -- (1,1);
+    \draw [ultra thick] (1,1) -- (1,-1);
+    \draw [ultra thick] (1,-1) -- (-1,-1);
+    \draw [ultra thick] (-1,-1) -- (-1,1);
+    \draw [thin, color=red] (0,1) -- (1,0);
+    \draw [thin, color=red] (1,0) -- (0,-1);
+    \draw [thin, color=red] (0,-1) -- (-1,0);
+    \draw [thin, color=red] (-1,0) -- (0,1);
+    \draw [thick, -to] (0,0) -- (0,0.5);
+  \end{tikzpicture}
+\end{center}
+
+\end{document}

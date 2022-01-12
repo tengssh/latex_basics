@@ -73,6 +73,32 @@
     - `\begin{appendix}`
   - Referencing
     - `\ref{MARKER}`, `\subref{}`, `\pageref{}`
+  - Bibliography
+    - BibTeX
+      ```latex
+      \bibliographystyle{unsrt} % abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
+      \bibliography{bib_file1.bib, bib_file2.bib, ...}
+      ```
+      - `\cite{ReferenceKey}`, `\nocite{ReferenceKey}`
+    - biblatex
+      - in the preamble
+        ```latex
+        \usepackage[backend=bibtex, % biber, bibtex
+        style=numeric, % numeric, alphabetic, authoryear, authortitle, verbose, reading, draft
+        sorting=nyt % nty, nyt, nyvt, anyt, anyvt, ydnt, none
+        ]{biblatex} 
+        \addbibresource{bib_file1.bib}
+        \addbibresource{bib_file2.bib}
+        ```
+      - in text
+        - `\autocite[PAGE_NUM]{ReferenceKey}`, `\textcite[PAGE_NUM]{ReferenceKey}`
+      - print the bibliography
+        - `\printbibliography`
+    - For more informations, please refer to these webpages
+      -  https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+      -  https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+      -  https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
+      -  https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
   - `geometry`: for page formatting, please refer to [geometry](https://ctan.org/pkg/geometry) document for more details.

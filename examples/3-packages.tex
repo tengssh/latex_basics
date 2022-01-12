@@ -8,6 +8,10 @@
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usepackage[backend=bibtex, style=reading, sorting=nyt]{biblatex} %style=numeric, alphabetic, authoryear, authortitle, verbose, reading, draft
+%\addbibresource{citation1}
+\addbibresource{citation1.bib}
+%\addbibresource{citation2.bibtex} % the file extension has to be .bib instead of .bibtex
 
 \title{LaTeX packages}
 \date{\today}
@@ -103,5 +107,10 @@ left & center & right\\
     \draw [thick, -to] (0,0) -- (0,0.5);
   \end{tikzpicture}
 \end{center}
+
+These are citations \autocite[2]{PhysRevB.78.104104} and \textcite[1]{PhysRevLett.99.077601} using biblatex.
+\newpage
+
+\printbibliography
 
 \end{document}

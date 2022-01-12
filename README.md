@@ -118,6 +118,7 @@
 - math ([tex](/examples/4-math.tex), [pdf](/examples/4-math.pdf))
 - figures ([tex](/examples/5-figures.tex), [pdf](/examples/5-figures.pdf))
 - table_of_contents ([tex](/examples/6-table_of_contents.tex), [pdf](/examples/6-table_of_contents.pdf))
+- bibliography ([tex](/examples/7-bibliography.tex), [pdf](/examples/7-bibliography.pdf))
 
 ## References
 - https://latex-tutorial.com/tutorials/

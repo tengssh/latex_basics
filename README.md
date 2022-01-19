@@ -73,6 +73,7 @@
     - `\begin{appendix}`
   - Referencing
     - `\ref{MARKER}`, `\subref{}`, `\pageref{}`
+    - `\footnote{\label{FOOTNOTE_LABEL} CONTENT}`, this footnote can be referred by using `\ref{FOOTNOTE_LABEL}`
   - Bibliography
     - BibTeX
       ```latex

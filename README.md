@@ -18,6 +18,9 @@
   - `\newpage`
   - `\pagenumbering{}`
     - gobble, arabic, roman
+  - Texts
+    - `text{}`: normal text
+    - `textbf{}`: bold
   - Table of contents
     - `\tableofcontents`
       - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
@@ -61,9 +64,17 @@
   - Table environment
     - `begin{table}`
     - `begin{tabular}{| l | c | r |}`
-      - `l`: left-alignment, `c`: center-alignment, `r`: right-alignment
+      - `l`: left-alignment, `c`: center-alignment, `r`: right-alignment, `S`: aligned decimal point (if `\usepackage{siunitx}`)
       - `|`: vertical line, `\hline`: horizontal line
       - in each row: `column1 & column2 & column3 \\`
+      - for `\usepackage{multirow}`
+        - multiple rows: `\multirow{NROWS}{WIDTH}{CONTENT}`
+        - multiple columns: `\multicolumn{NCOLUMNS}{ALIGNMENT}{CONTENT}`
+      - for long table, `\usepackage{longtable}`
+        - `\begin{longtable}[placement specifier]{ALIGNMENT}`
+        - Put the header between `\endfirsthead` and `\endhead` so that it will be shown on every page.
+      - `usepackage{rotating}` to rotate the table
+        - `\begin{sidewaystable}`
   - List environment
     - `\begin{itemize}`, `\begin{enumerate}`
       - `\item ITEM 1`
@@ -111,6 +122,11 @@
   - `subcaption`: for `subfigure` environment
   - `booktabs`: for `tabular` environment, `\hline` can be replaced by `\toprule`, `\midrule` and `\bottomrule`
   - `tikz`: for drawing, please visit [TIKZ Blog](https://latexdraw.com/) for more examples
+  - `siunitx`: for aligning the decimal point
+    - `\sisetup{round-mode= places, round-precision= 3}` (round-mode: places, figures)
+  - `multirow`: for multiple rows in one cell
+  - `longtable`: for long table
+  - `rotating`: rotate the table
 
 ## Examples
 - first_latex ([tex](/examples/1-first_latex.tex), [pdf](/examples/1-first_latex.pdf))

@@ -1,116 +1,127 @@
-# LaTeX basics
+# Introduction to LaTeX
+## LaTeX basics
 - LaTeX commands: `\command{option}`
-  - `\documentclass{}`: layout of the document
-    - article, book, beamer
-  - `\begin{}`, `\end{}`: define an environment
+- `\documentclass{}`: layout of the document
+  - article, book, beamer
+- `\begin{}`, `\end{}`: define an environment
+  ```latex
+  \begin{document}
+    \begin{environment1}
+      \begin{environment2}
+    \end{environment1}
+      \end{environment2}
+  \end{document}
+  ```
+- `\title{}`
+- `\date{}`
+  - `\today`
+- `\author{}`
+- `\newpage`
+- `\pagenumbering{}`
+  - gobble, arabic, roman
+- Texts
+  - `text{}`: normal text
+  - `textbf{}`: bold
+- Table of contents
+  - `\tableofcontents`
+    - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
+    - Specify individually before each section: `\addtocontents{toc}{\setcounter{tocdepth}{3}}`
+  - `\listoffigures`, `\listoftables`
+- Sections: `\section{}`, `\subsection{}`, `\subsubsection{}`
+- Paragraphs: `\paragraph{}`, `\subparagraph{}`
+
+## Math
+- Math environments: `$INLINE_FORMULA$`, `\(INLINE_FORMULA\)`, `equation`, `align`
+  - use asterisk (e.g. `equation*`, `align*`) to turn-off auto numbering
+  - math symbols
+    - https://latex-tutorial.com/symbols/math-symbols/
+    - most math symbols have to be used in the math environments
+  - `\left`, `\right`: scale up the bracket symbol after it
+  - Partitioned statements (with `amsmath` package):
     ```latex
-    \begin{document}
-      \begin{environment1}
-        \begin{environment2}
-      \end{environment1}
-        \end{environment2}
-    \end{document}
+    \[
+    LHS =
+      \begin{cases}
+        RHS1, & \text{CONDITION1}\\
+        RHS2, & \text{CONDITION2}
+      \end{cases}
+    \]
     ```
-  - `\title{}`
-  - `\date{}`
-    - `\today`
-  - `\author{}`
-  - `\newpage`
-  - `\pagenumbering{}`
-    - gobble, arabic, roman
-  - Texts
-    - `text{}`: normal text
-    - `textbf{}`: bold
-  - Table of contents
-    - `\tableofcontents`
-      - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
-      - Specify individually before each section: `\addtocontents{toc}{\setcounter{tocdepth}{3}}`
-    - `\listoffigures`, `\listoftables`
-  - Sections: `\section{}`, `\subsection{}`, `\subsubsection{}`
-  - Paragraphs: `\paragraph{}`, `\subparagraph{}`
-  - Math environments: `$INLINE_FORMULA$`, `\(INLINE_FORMULA\)`, `equation`, `align`
-    - use asterisk (e.g. `equation*`, `align*`) to turn-off auto numbering
-    - math symbols
-      - https://latex-tutorial.com/symbols/math-symbols/
-      - most math symbols have to be used in the math environments
-    - `\left`, `\right`: scale up the bracket symbol after it
-    - Partitioned statements (with `amsmath` package):
+
+## Figure
+- Figure environments
+  - `\begin{figure}[placement specifier]`
+    - h (here, if possible), t (top), b (bottom), p (page of floats), ! (override)
+    - H (here, definitely) if `\usepackage{float}`
+  - `\begin{subfigure}[pos][height][inner-pos]{width}`
+    - pos: c (center, default), t (top), b (bottom)
+    - height: strech the height of the subfigure (e.g. 10pt, 1cm)
+    - inner-pos: t (top), c (center), b (bottom), s (stretch)
+    - width: width of the subfigure
+  - `\includegraphics[width=SIZE\textwidth]{FIGURE_PATH}`
+    - SIZE: 0~1 (use 0.1 less than you expect)
+  - `\caption{}`
+  - `\label{MARKER}`: this MARKER can be used for later referencing
+  - `\centering`
+  - `\hfill`: make one figure left-align and the other right-align, then fill spaces to produce a rubber length (same as `\hspace\fill`)
+  - `\hspace{L cm}`: L can be a positive or negative value.
+  - `\ContinuedFloat`: preserve the numbering from the previous subfigures
+ 
+ ## Table & List
+- Table environment
+  - `begin{table}`
+  - `begin{tabular}{| l | c | r |}`
+    - `l`: left-alignment, `c`: center-alignment, `r`: right-alignment, `S`: aligned decimal point (if `\usepackage{siunitx}`)
+    - `|`: vertical line, `\hline`: horizontal line
+    - in each row: `column1 & column2 & column3 \\`
+    - for `\usepackage{multirow}`
+      - multiple rows: `\multirow{NROWS}{WIDTH}{CONTENT}`
+      - multiple columns: `\multicolumn{NCOLUMNS}{ALIGNMENT}{CONTENT}`
+    - for long table, `\usepackage{longtable}`
+      - `\begin{longtable}[placement specifier]{ALIGNMENT}`
+      - Put the header between `\endfirsthead` and `\endhead` so that it will be shown on every page.
+    - `usepackage{rotating}` to rotate the table
+      - `\begin{sidewaystable}`
+- List environment
+  - `\begin{itemize}`, `\begin{enumerate}`
+    - `\item ITEM 1`
+    - `\item ITEM 2`
+    - `\item ITEM n`
+ 
+ ## Appendix & Bibliography
+- Appendix environment
+  - `\begin{appendix}`
+- Referencing
+  - `\ref{MARKER}`, `\subref{}`, `\pageref{}`
+  - `\footnote{\label{FOOTNOTE_LABEL} CONTENT}`, this footnote can be referred by using `\ref{FOOTNOTE_LABEL}`
+- Bibliography
+  - BibTeX
+    ```latex
+    \bibliographystyle{unsrt} % abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
+    \bibliography{bib_file1.bib, bib_file2.bib, ...}
+    ```
+    - `\cite{ReferenceKey}`, `\nocite{ReferenceKey}`
+  - biblatex
+    - in the preamble
       ```latex
-      \[
-      LHS =
-        \begin{cases}
-          RHS1, & \text{CONDITION1}\\
-          RHS2, & \text{CONDITION2}
-        \end{cases}
-      \]
+      \usepackage[backend=bibtex, % biber, bibtex
+      style=numeric, % numeric, alphabetic, authoryear, authortitle, verbose, reading, draft
+      sorting=nyt % nty, nyt, nyvt, anyt, anyvt, ydnt, none
+      ]{biblatex} 
+      \addbibresource{bib_file1.bib}
+      \addbibresource{bib_file2.bib}
       ```
-  - Figure environments
-    - `\begin{figure}[placement specifier]`
-      - h (here, if possible), t (top), b (bottom), p (page of floats), ! (override)
-      - H (here, definitely) if `\usepackage{float}`
-    - `\begin{subfigure}[pos][height][inner-pos]{width}`
-      - pos: c (center, default), t (top), b (bottom)
-      - height: strech the height of the subfigure (e.g. 10pt, 1cm)
-      - inner-pos: t (top), c (center), b (bottom), s (stretch)
-      - width: width of the subfigure
-    - `\includegraphics[width=SIZE\textwidth]{FIGURE_PATH}`
-      - SIZE: 0~1 (use 0.1 less than you expect)
-    - `\caption{}`
-    - `\label{MARKER}`: this MARKER can be used for later referencing
-    - `\centering`
-    - `\hfill`: make one figure left-align and the other right-align, then fill spaces to produce a rubber length (same as `\hspace\fill`)
-    - `\hspace{L cm}`: L can be a positive or negative value.
-    - `\ContinuedFloat`: preserve the numbering from the previous subfigures
-  - Table environment
-    - `begin{table}`
-    - `begin{tabular}{| l | c | r |}`
-      - `l`: left-alignment, `c`: center-alignment, `r`: right-alignment, `S`: aligned decimal point (if `\usepackage{siunitx}`)
-      - `|`: vertical line, `\hline`: horizontal line
-      - in each row: `column1 & column2 & column3 \\`
-      - for `\usepackage{multirow}`
-        - multiple rows: `\multirow{NROWS}{WIDTH}{CONTENT}`
-        - multiple columns: `\multicolumn{NCOLUMNS}{ALIGNMENT}{CONTENT}`
-      - for long table, `\usepackage{longtable}`
-        - `\begin{longtable}[placement specifier]{ALIGNMENT}`
-        - Put the header between `\endfirsthead` and `\endhead` so that it will be shown on every page.
-      - `usepackage{rotating}` to rotate the table
-        - `\begin{sidewaystable}`
-  - List environment
-    - `\begin{itemize}`, `\begin{enumerate}`
-      - `\item ITEM 1`
-      - `\item ITEM 2`
-      - `\item ITEM n`
-  - Appendix environment
-    - `\begin{appendix}`
-  - Referencing
-    - `\ref{MARKER}`, `\subref{}`, `\pageref{}`
-    - `\footnote{\label{FOOTNOTE_LABEL} CONTENT}`, this footnote can be referred by using `\ref{FOOTNOTE_LABEL}`
-  - Bibliography
-    - BibTeX
-      ```latex
-      \bibliographystyle{unsrt} % abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
-      \bibliography{bib_file1.bib, bib_file2.bib, ...}
-      ```
-      - `\cite{ReferenceKey}`, `\nocite{ReferenceKey}`
-    - biblatex
-      - in the preamble
-        ```latex
-        \usepackage[backend=bibtex, % biber, bibtex
-        style=numeric, % numeric, alphabetic, authoryear, authortitle, verbose, reading, draft
-        sorting=nyt % nty, nyt, nyvt, anyt, anyvt, ydnt, none
-        ]{biblatex} 
-        \addbibresource{bib_file1.bib}
-        \addbibresource{bib_file2.bib}
-        ```
-      - in text
-        - `\autocite[PAGE_NUM]{ReferenceKey}`, `\textcite[PAGE_NUM]{ReferenceKey}`
-      - print the bibliography
-        - `\printbibliography`
-    - For more informations, please refer to these webpages
-      -  https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
-      -  https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
-      -  https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
-      -  https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
+    - in text
+      - `\autocite[PAGE_NUM]{ReferenceKey}`, `\textcite[PAGE_NUM]{ReferenceKey}`
+    - print the bibliography
+      - `\printbibliography`
+  - For more informations, please refer to these webpages
+    -  https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+    -  https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+    -  https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
+    -  https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
+
+## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
   - `geometry`: for page formatting, please refer to [geometry](https://ctan.org/pkg/geometry) document for more details.

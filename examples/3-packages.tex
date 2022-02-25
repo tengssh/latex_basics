@@ -17,6 +17,31 @@
 \usepackage{longtable}
 \usepackage{rotating}
 \usepackage{pgfplotstable}
+
+\usepackage{listings}
+\usepackage{color}
+\lstset{
+language=Python,
+backgroundcolor=\color{white},
+commentstyle=\color{green},
+keywordstyle=\color{blue},
+numberstyle=\tiny,
+stringstyle=\color{red},
+basicstyle=\sffamily\footnotesize,
+breakatwhitespace=false,
+breaklines=trure,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny,
+frame=tb,
+columns=fixed,
+showstringspaces=false,
+showtabs=false,
+tabsize=4,
+}
+
 \usepackage[backend=bibtex, style=reading, sorting=nyt]{biblatex} %style=numeric, alphabetic, authoryear, authortitle, verbose, reading, draft
 %\addbibresource{citation1}
 \addbibresource{citation1.bib}
@@ -242,6 +267,15 @@ left & center & right\\
     \draw (-2.5,-1) node [blue,left]{Ti} (-1.5,1) node [green,left]{Ba} (1.1,0) node [red,right]{O};
   \end{tikzpicture}
 \end{center}
+
+\section{Source Code Listings}
+\begin{lstlisting}
+#!/usr/bin python
+def hello_world(text=''):
+    print(''Hello World {}!''.format(text))
+\end{lstlisting}
+
+\lstinputlisting{script.py}
 
 These are citations \autocite[2]{PhysRevB.78.104104} and \textcite[1]{PhysRevLett.99.077601} using biblatex.
 \newpage

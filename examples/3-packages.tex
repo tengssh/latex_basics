@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usepackage{circuitikz}
 \usepackage{siunitx}
 \sisetup{
   round-mode= places,
@@ -266,6 +267,17 @@ left & center & right\\
     \draw [dashed, color=blue, -latex] (-0.35, -0.35) to [out=-135,in=0] (-2.5,-1);
     \draw (-2.5,-1) node [blue,left]{Ti} (-1.5,1) node [green,left]{Ba} (1.1,0) node [red,right]{O};
   \end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{circuitikz}
+	\draw (0,0) node[nmos, rotate=-90](T){} node[below]{T};
+	\draw (T.S) to[short] ++(-1,0) node[left]{BL} to[short] ++(0, -0.5) to[R=$R$] ++(0,-1) node[vee](V){$V_{dd}$};
+	\draw (T.S) to[short] ++(-1,0) to[short] ++(0,2.5);
+	\draw (T.G) to[short] ++(0,1) node[above]{WL} to[short] ++(-2.5,0);
+	\draw (T.G) to[short] ++(0,1) to[short] ++(2,0);
+	\draw (T.D) to[short] ++(1,0) to[short] ++(0, -0.5) to[C=$C$] ++(0,-1) node[ground](GND){};
+\end{circuitikz}
 \end{center}
 
 \section{Source Code Listings}

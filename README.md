@@ -1,5 +1,13 @@
 # Introduction to LaTeX
 - [LaTex basics](README.md#latex-basics)
+- [Math](README.md#math)
+- [Figure](README.md#figure)
+- [Table & List](README.md#table--list)
+- [Appendix & Bibliography](README.md#appendix--bibliography)
+- [LaTeX packages](README.md#latex-packages)
+- [Examples](README.md#examples)
+- [References](README.md#references)
+
 ## LaTeX basics
 - LaTeX commands: `\command{option}`
 - `\documentclass{}`: layout of the document

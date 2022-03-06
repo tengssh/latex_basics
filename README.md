@@ -1,4 +1,5 @@
 # Introduction to LaTeX
+- [LaTex basics](README.md#latex-basics)
 ## LaTeX basics
 - LaTeX commands: `\command{option}`
 - `\documentclass{}`: layout of the document
@@ -133,6 +134,7 @@
   - `subcaption`: for `subfigure` environment
   - `booktabs`: for `tabular` environment, `\hline` can be replaced by `\toprule`, `\midrule` and `\bottomrule`
   - `tikz`: for drawing, please visit [TIKZ Blog](https://latexdraw.com/) for more examples
+  - `circuitikz`: for drawing circuit diagram
   - `siunitx`: for aligning the decimal point
     - `\sisetup{round-mode= places, round-precision= 3}` (round-mode: places, figures)
   - `multirow`: for multiple rows in one cell

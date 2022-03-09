@@ -47,6 +47,7 @@ tabsize=4,
 %\addbibresource{citation1}
 \addbibresource{citation1.bib}
 %\addbibresource{citation2.bibtex} % the file extension has to be .bib instead of .bibtex
+\usepackage{hyperref}
 
 \title{LaTeX packages}
 \date{\today}
@@ -272,9 +273,9 @@ left & center & right\\
 \begin{center}
 \begin{circuitikz}
 	\draw (0,0) node[nmos, rotate=-90](T){} node[below]{T};
-	\draw (T.S) to[short] ++(-1,0) node[left]{BL} to[short] ++(0, -0.5) to[R=$R$] ++(0,-1) node[vee](V){$V_{dd}$};
-	\draw (T.S) to[short] ++(-1,0) to[short] ++(0,2.5);
-	\draw (T.G) to[short] ++(0,1) node[above]{WL} to[short] ++(-2.5,0);
+	\draw (T.S) to[short,-o, i^<=$i$] ++(-1,0) node[left]{BL} to[short] ++(0, -0.5) to[R, l=$R$,v=$V$] ++(0,-1) node[vee](V){$V_{dd}$};
+	\draw (T.S) to[short] ++(-1,0) to[short, i_<=$i$] ++(0,2.5);
+	\draw (T.G) to[short,-*] ++(0,1) node[above]{WL} to[short] ++(-2.5,0);
 	\draw (T.G) to[short] ++(0,1) to[short] ++(2,0);
 	\draw (T.D) to[short] ++(1,0) to[short] ++(0, -0.5) to[C=$C$] ++(0,-1) node[ground](GND){};
 \end{circuitikz}
@@ -289,7 +290,9 @@ def hello_world(text=''):
 
 \lstinputlisting{script.py}
 
+\section{Citations \& Hyperlinks}
 These are citations \autocite[2]{PhysRevB.78.104104} and \textcite[1]{PhysRevLett.99.077601} using biblatex.
+Using hyperlinks like \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.78.104104}{this} or \url{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.78.104104}.
 \newpage
 
 \printbibliography

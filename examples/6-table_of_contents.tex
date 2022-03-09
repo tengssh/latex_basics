@@ -5,6 +5,10 @@
 %\setcounter{tocdepth}{4} % + paragraphs
 %\setcounter{tocdepth}{5} % + subparagraphs
 
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{enumitem}
+
 \begin{document}
 \tableofcontents
 \newpage
@@ -40,6 +44,35 @@ Dummy text
 \item Item 1
 \item Item 2
 \item Item 3
+\end{enumerate}
+\paragraph{Customized list}
+\begin{itemize}
+\item[.] dot
+\item[o] o
+\item[-] line
+\item[--] dash
+\item[$\ast$] asterisk
+\item[\ding{51}] yes
+\item[\ding{56}] no
+\item[\ding{108}] circle
+\item[\ding{110}] square
+\end{itemize}
+\begin{enumerate}[label=(\arabic*)] 
+\item Item 1
+	\begin{enumerate}[label=\Alph*.] 
+	\item Item 1
+	\end{enumerate}
+\item Item 2
+	\begin{enumerate}[label=\roman*.] 
+	\item Item 1
+	\item Item 2
+	\end{enumerate}
+\item Item 3
+	\begin{itemize}[label=$\circ$] 
+	\item Item 1
+	\item Item 2
+	\item Item 3
+	\end{itemize}
 \end{enumerate}
 \newpage
 

@@ -4,6 +4,7 @@
 - [Figure](README.md#figure)
 - [Table & List](README.md#table--list)
 - [Appendix & Bibliography](README.md#appendix--bibliography)
+- [Presentation](README.md#presentation)
 - [LaTeX packages](README.md#latex-packages)
 - [Examples](README.md#examples)
 - [References](README.md#references)
@@ -142,6 +143,25 @@
     -  https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
     -  https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
 
+## Presentation
+- LaTeX presentation environment
+  - `begin{beamer}`
+- Themes
+  - `\usetheme{default}`
+    - Boadilla, Madrid, Montpellier, Warsaw, ,Copenhagen, Goettingen, Hannover, Berkeley
+- Title page
+  - `\title{}`, `\subtitle{}`, `\author{}`, `\date{}`, 
+  - `\titlegraphic{}`
+  - `\titlepage`
+- Logo
+  - `\logo{}`
+- Section
+  - `\section{}`
+- Frame
+  - `\begin{frame}[label={LABEL}]{TITLE}{Subtitle}`
+- Hyperlink
+  - `\hyperlink{LABEL}{\beamerbutton{TEXT}}`
+
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
@@ -178,9 +198,11 @@
 - table_of_contents ([tex](/examples/6-table_of_contents.tex), [pdf](/examples/6-table_of_contents.pdf))
 - bibliography ([tex](/examples/7-bibliography.tex), [pdf](/examples/7-bibliography.pdf))
 - csv_tables/plots ([tex](/examples/8-csv_tables.tex), [pdf](/examples/8-csv_tables.pdf))
+- presentation ([tex](/examples/9-presentation.tex), [pdf](/examples/9-presentation.pdf))
 
 ## References
 - https://latex-tutorial.com/tutorials/
+- https://latex-beamer.com/
 - https://vknight.org/tex/
 - https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)
 - https://en.wikibooks.org/wiki/LaTeX

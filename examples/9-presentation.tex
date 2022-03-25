@@ -1,0 +1,86 @@
+\documentclass{beamer}
+
+\usetheme{default}
+%\usetheme{Boadilla}
+%\usetheme{Madrid}
+%\usetheme{Montpellier}
+%\usetheme{Warsaw}
+%\usetheme{Copenhagen}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Berkeley}
+
+\title{Beamer example}
+\subtitle{A simple template}
+\author{Author}
+\date{\today}
+\titlegraphic{Title Graph}
+\logo{LaTeX Beamer Logo}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
+
+\section{Section 1}
+\begin{frame}[label={slide1}]{Slide 1}{Subtitle A}
+	\begin{itemize}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+	\end{itemize}
+	\hyperlink{summary}{\beamerbutton{Summary $\rightarrow$}}
+\end{frame}
+
+\frame{\frametitle{Slide 2}\framesubtitle{Subtitle B}
+	\begin{enumerate}
+	\item Item a
+	\item Item b
+	\item Item c
+	\end{enumerate}
+}
+
+\section{Section 2}
+\frame{\frametitle{Slide 3}\framesubtitle{Subtitle C}
+	\begin{description}
+	\item[DFT] Density Functional Theory
+	\item[MD] Molecular Dynamics
+	\item[ML] Machine Learning
+	\end{description}
+}
+
+\section{Section 3}
+\begin{frame}[label={summary}]{Summary}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{table}
+			\begin{tabular}{| c | c |}
+			    \hline
+			    A & B \\
+			    \hline
+			    1 & i \\
+			    2 & ii \\ 
+			    \hline
+			\end{tabular}
+			\caption{Left column}
+		\end{table}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{block}{Right column}
+			This is a block.
+		\end{block}
+		\begin{theorem} % corollary, proof
+			$x^2+y^2=z^2$
+		\end{theorem}
+		\hyperlink{slide1}{\beamerbutton{Slide 1 $\rightarrow$}}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
+

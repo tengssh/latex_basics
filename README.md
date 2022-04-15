@@ -142,6 +142,10 @@
     -  https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
     -  https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
     -  https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
+  - Exporting references from reference managers
+    - [Mendeley](https://www.mendeley.com/guides/mendeley-reference-manager/08.-exporting-references)
+    - [Zotero](https://www.zotero.org/support/kb/exporting)
+      - You may have to modify the title field manually for using [rich text formatting](https://www.zotero.org/support/kb/rich_text_bibliography).
 
 ## Presentation
 - LaTeX presentation environment

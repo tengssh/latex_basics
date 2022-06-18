@@ -1,0 +1,94 @@
+\documentclass{beamer}
+\usetheme{Darmstadt}
+% AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen
+% Darmstadt, default, Dresden, Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins
+% Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester
+% Singapore, Szeged, Warsaw
+\usecolortheme{dolphin}
+% albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose
+% seagull, seahorse, sidebartab, structure, whale, wolverine
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+
+\title[beamer poster template]{Beamer Poster Template}
+\author[name]{Name}
+\institute[affiliation]{Affiliation}
+\date{\today}
+
+\begin{document}
+  \begin{frame}{} 
+	\vspace{-0cm}
+	\begin{beamercolorbox}{}
+	\maketitle
+	\end{beamercolorbox}
+	\vskip 2cm
+	
+	\begin{block}{}
+	\blindtext
+	\end{block}
+	
+	\begin{columns}[t]
+   	\begin{column}{0.33\linewidth}
+     		\begin{block}{\veryHuge Block A1}
+     		\centering
+      	{\tiny tiny} $\rightarrow$
+      	{\scriptsize scriptsize} $\rightarrow$
+      	{\footnotesize footnotesize} $\rightarrow$
+     		{\normalsize normalsize}
+     		 \vspace{6cm}
+     		\end{block}
+		\end{column}
+		\begin{column}{0.33\linewidth}
+     		\begin{block}{\VeryHuge Block A2}
+     		 \vspace{8cm}
+     		\end{block}
+		\end{column}
+		\begin{column}{0.33\linewidth}
+     		\begin{block}{\VERYHuge Block A3}
+     		\centering
+     		 \vspace{10cm}
+     		\end{block}
+		\end{column}
+	\end{columns}
+ 
+ 	\vfill
+ 
+ 	\begin{columns}[t]
+ 		\begin{column}{0.5\linewidth}
+ 			\begin{block}{\large Block B1}
+ 				\begin{figure}[h!]
+ 					\includegraphics[width=0.8\linewidth]{example-image}
+ 					\caption{This is the caption.}
+				\end{figure}
+     		\end{block}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+ 			\begin{block}{\Large Block B2}
+ 			\blindtext
+ 			 \vspace{6cm}
+     		\end{block}
+		\end{column}
+ 	\end{columns}
+ 	
+ 	\vfill
+ 	
+ 	\begin{columns}[t]
+ 		\begin{column}{0.5\linewidth}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+ 			\begin{block}{\LARGE Block C - References}
+ 			\vspace{6cm}
+ 			\blindtext
+     		\end{block}
+		\end{column}
+ 	\end{columns}
+ 	
+ 	\vskip 15cm
+ 	
+ 	\begin{block}{Block D}
+ 	Here should be the conclusion. \blindtext
+ 	\end{block}
+	
+  \end{frame}
+\end{document}

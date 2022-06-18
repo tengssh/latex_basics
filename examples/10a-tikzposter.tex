@@ -1,0 +1,58 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+
+\title{Tikz Poster Template}
+\author{Name}
+\date{\today}
+\institute{Affiliation}
+
+\usepackage{graphicx}
+\usepackage{blindtext}
+
+\usetheme{Desert} % Default, Rays, Basic, Simple, Envelope, Wave, Board, Autumn, Desert
+
+\begin{document}
+
+\maketitle
+
+\block{}
+{
+    \blindtext
+}
+
+\begin{columns}
+    \column{0.33}
+    \block{Blcok A1}{Description A1 \vspace{6cm}}
+    \column{0.33}
+    \block{Blcok A2}{Description A2 \vspace{8cm}}
+    \column{0.33}
+    \block{Blcok A3}{Description A3 \vspace{10cm}}
+\end{columns}
+
+\begin{columns}
+    \column{0.5}
+    \block{Block B1 - Figure 1}
+    {
+        \begin{tikzfigure}
+            \includegraphics[width=0.4\textwidth]{example-image}
+        \end{tikzfigure}
+    }
+    \note[targetoffsetx=-8cm, targetoffsety=-16cm, width=0.4\linewidth]{This is a note.}
+    \column{0.5}
+    \block{Block B2 - Description of the Figure 1}{\blindtext \vspace{14cm}}
+\end{columns}
+
+\begin{columns}
+    \column{0.5}
+    \column{0.5}
+    \block{Blcok C - References}{\vspace{6cm} \blindtext}
+\end{columns}
+
+\block[
+  bodyoffsety=-6cm,
+  titleoffsety=-6cm
+]{Block D}
+{
+    Here should be the conclusion. \blindtext
+}
+
+\end{document}

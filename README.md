@@ -5,6 +5,7 @@
 - [Table & List](README.md#table--list)
 - [Appendix & Bibliography](README.md#appendix--bibliography)
 - [Presentation](README.md#presentation)
+- [Poster](README.md#poster)
 - [LaTeX packages](README.md#latex-packages)
 - [Examples](README.md#examples)
 - [References](README.md#references)
@@ -166,6 +167,70 @@
 - Hyperlink
   - `\hyperlink{LABEL}{\beamerbutton{TEXT}}`
 
+## Poster
+- TikZ poster
+  - `\documentclass[FONT_SIZE, PAPER_SIZE, ORIENT]{tikzposter}`
+    - FONT_SIZE: 12pt, 14pt, 25pt, ...
+    - PAPER_SIZE: a0paper, a1paper, a2paper, a3paper, a4paper
+    - ORIENT: landscape, portrait
+  - `\usetheme{}`
+    - Default, Rays, Basic, Simple, Envelope, Wave, Board, Autumn, Desert
+  - Title
+    - `\maketitle`
+  - Block
+    ```latex
+    \block{TITLE}
+    {
+      TEXT
+    }
+    ```
+  - Columns
+    ```latex
+    \begin{columns}
+      \column{WIDTH}
+      \block{TITLE}{}
+      \column{WIDTH}
+      \block{TITLE}{}
+    \end{columns}
+    ```
+- Beamer poster
+  - `\documentclass{beamer}` + `\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}`
+    - `orientation`: landscape, portrait
+    - `size`: a0, a1, a2, a3, a4
+    - `scale`
+  - Themes
+    - `\usetheme{}`
+      - AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadt, default, Dresden, Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw
+    - `\usecolortheme{}`
+      - albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+    - https://deic.uab.cat/~iblanes/beamer_gallery/index.html
+  - Block
+    ```latex
+    \begin{frame}{}
+      \begin{block}{TITLE}
+        TEXT
+      \end{block}
+    \end{frame}
+    ```
+  - Columns
+    ```latex
+    \begin{frame}{}
+    \begin{columns}[t]
+      \begin{column}{WIDTH}
+        \begin{block}{TITLE}
+        \end{block}
+      \end{column}
+      \begin{column}{WIDTH}
+        \begin{block}{TITLE}
+        \end{block}
+      \end{column}
+    \end{columns}
+    \end{frame}
+    ```
+- Tutorials
+  - https://latex-beamer.com/
+  - https://www.overleaf.com/learn/latex/Posters
+
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
@@ -192,6 +257,8 @@
   - `cleveref`: for cross-referencing with automatic formatting
   - `enumitem`: for changing the bullet point symbol
   - `pifont`: for more bullet point styles, more symbols can be found in the [manual](https://ctan.org/pkg/pifont)
+  - `blindtext`: generate dummy text
+  - `beamer` & `beamerposter`: for presentations & posters
 
 ## Examples
 - first_latex ([tex](/examples/1-first_latex.tex), [pdf](/examples/1-first_latex.pdf))
@@ -203,12 +270,12 @@
 - bibliography ([tex](/examples/7-bibliography.tex), [pdf](/examples/7-bibliography.pdf))
 - csv_tables/plots ([tex](/examples/8-csv_tables.tex), [pdf](/examples/8-csv_tables.pdf))
 - presentation ([tex](/examples/9-presentation.tex), [pdf](/examples/9-presentation.pdf))
+- poster ([tex-tikz](/examples/10a-tikzposter.tex), [pdf-tikz](/examples/10a-tikzposter.pdf); [tex-beamer](/examples/10b-beamerposter.tex), [pdf-beamer](/examples/10b-beamerposter.pdf))
 
 ## References
 - https://latex-tutorial.com/tutorials/
-- https://latex-beamer.com/
 - https://vknight.org/tex/
 - https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)
 - https://en.wikibooks.org/wiki/LaTeX
 - https://ctan.org/
-- http://users.softlab.ntua.gr/~sivann/books/LaTeX%20-%20User%27s%20Guide%20and%20Reference%20Manual-lamport94.pdf
+- [PDF][LaTeX: A Document Preparation System by Leslie Lamport](http://users.softlab.ntua.gr/~sivann/books/LaTeX%20-%20User%27s%20Guide%20and%20Reference%20Manual-lamport94.pdf)

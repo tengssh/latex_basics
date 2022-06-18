@@ -227,9 +227,6 @@
     \end{columns}
     \end{frame}
     ```
-- Tutorials
-  - https://latex-beamer.com/
-  - https://www.overleaf.com/learn/latex/Posters
 
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
@@ -274,8 +271,10 @@
 
 ## References
 - https://latex-tutorial.com/tutorials/
+- https://latex-beamer.com/
 - https://vknight.org/tex/
 - https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)
+- https://www.overleaf.com/learn/latex/Posters
 - https://en.wikibooks.org/wiki/LaTeX
 - https://ctan.org/
 - [PDF][LaTeX: A Document Preparation System by Leslie Lamport](http://users.softlab.ntua.gr/~sivann/books/LaTeX%20-%20User%27s%20Guide%20and%20Reference%20Manual-lamport94.pdf)

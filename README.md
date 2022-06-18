@@ -146,7 +146,7 @@
   - Exporting references from reference managers
     - [Mendeley](https://www.mendeley.com/guides/mendeley-reference-manager/08.-exporting-references)
     - [Zotero](https://www.zotero.org/support/kb/exporting)
-      - You may have to modify the title field manually for using [rich text formatting](https://www.zotero.org/support/kb/rich_text_bibliography).
+      - You may have to modify the title field manually with [rich text formatting](https://www.zotero.org/support/kb/rich_text_bibliography).
 
 ## Presentation
 - LaTeX presentation environment

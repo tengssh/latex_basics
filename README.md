@@ -228,6 +228,15 @@
     \end{frame}
     ```
 
+## Journals
+- [REVTeX](https://journals.aps.org/revtex)
+  - Package: https://www.ctan.org/pkg/revtex
+  - Usage: `\documentclass[OPTIONS]{revtex4-2}`
+  - Documentation:
+    - [PDF][APS Author Guide for REVTEX 4.2](https://ctan.math.illinois.edu/macros/latex/contrib/revtex/auguide/auguide4-2.pdf)
+    - [PDF][Author's Guide to AIP Substyles for REVTEX 4.2](https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/revtex/aip/aipguide4-2.pdf)
+    - [PDF][REVTEX 4.2 Command and Options Summary](https://ctan.math.illinois.edu/macros/latex/contrib/revtex/auguide/summary4-2.pdf)
+
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
@@ -268,6 +277,7 @@
 - csv_tables/plots ([tex](/examples/8-csv_tables.tex), [pdf](/examples/8-csv_tables.pdf))
 - presentation ([tex](/examples/9-presentation.tex), [pdf](/examples/9-presentation.pdf))
 - poster ([tex-tikz](/examples/10a-tikzposter.tex), [pdf-tikz](/examples/10a-tikzposter.pdf); [tex-beamer](/examples/10b-beamerposter.tex), [pdf-beamer](/examples/10b-beamerposter.pdf))
+- revtex ([tex](/examples/11-revtex_template.tex), [pdf](/examples/11-revtex_template.pdf))
 
 ## References
 - https://latex-tutorial.com/tutorials/

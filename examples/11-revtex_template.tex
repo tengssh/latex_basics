@@ -1,0 +1,138 @@
+\documentclass[
+aps, % aps [default], aip, aapm, sor
+prb, 
+%% [aps]: prl, pra, prb, prc, prd, pre, prab, prper, prx, prapplied, prfluids, prmaterials, physrev, rmp,
+%% [aip]: apl, bmf, cha, jap, jcp, jmp, rse, pof, pop, rsi, apm, adv, sd,
+%% [aapm]: mph,
+%% [sor]: jor,
+twocolumn, % onecolumn, preprint, reprint,
+10pt, % [12pt for preprint, 10pt for twocolumn]
+superscriptaddress, % groupedaddress [default], superscriptaddress, unsortedaddress, runinaddress,
+% draft,
+amsfont, % noamsfonts,
+amssymb, % noamssymb,
+amsmath, % noamsfonts,
+% preprintnumbers, nopreprintnumbers,
+% floatfix,
+% bibnotes, nobibnotes,
+% footinbib, nofootinbib
+% eprint, noeprint,
+% altaffilletter, altaffillsymbol,
+showkeys, % noshowkeys
+% tightenlines [with preprint]
+floats, % endfloats, endfloats*
+% titlepage, notitlepage
+final, 
+letterpaper, % letterpaper [default], a4paper, a5paper, oneside, twoside
+% fleqn,
+% eqsecnum
+balancelastpage, % balancelastpage [default for twocolumn], nobalancelastpage
+flushbottom, % flushbottom [default for twocolumn], raggedbottom,
+% raggedfooter, noraggedfooter
+citeautoscript,
+]{revtex4-2}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+
+\begin{document}
+\title{Title}
+\author{Name1}
+\author{Name2}
+\affiliation{Affiliation1}
+\author{Name3}
+\affiliation{Affiliation2}
+\email{author3@email}
+\date{\today}
+
+\begin{abstract}
+This is a structured abstract.
+\begin{description}
+\item[Background] Why?
+\item[Purpose] Why did you do it?
+\item[Method] How did you do it?
+\item[Results] What did you do and what did you find out?
+\item[Conclusions] What does that mean?
+\end{description}
+\end{abstract}
+
+\keywords{Keyword1; Keyword2; Keyword3}
+
+\maketitle
+
+\section{Introduction}
+\begin{quotation}
+This is a quotation.
+\end{quotation}
+This is introduction. Here is a citation \cite{PhysRevB.78.104104}.
+
+\section{Methods}
+\subsection{Method1}
+This is for method1. An inline equation $1+1\leq2$.
+A numbered equation:
+\begin{equation}
+F=U-TS
+\end{equation}
+
+A unnumbered equation:
+\[H=T+V\]
+
+Multiple equations:
+\begin{eqnarray}
+\Phi=\frac{1}{c}e^{-ikx}\\
+|\Phi|^2=1
+\end{eqnarray}
+
+This is a long equation:
+\begin{widetext}
+\[(1-x)^n=1-nx+\frac{1}{2}(n-1)nx^2-\frac{1}{6}((n-2)(n-1)n)x^3+...\]
+\end{widetext}
+
+\subsection{Method2}
+This is for method2. This is online citation \onlinecite{PhysRevLett.99.077601}. 
+
+\section{Results \& Discussion}
+This is reaults and discussion. 
+Here is a long table:
+\onecolumngrid
+\begin{longtable}{c | c | c | c | c | c}
+\caption{This is a table.}
+\label{tab:table1}\\
+\hline
+\textbf{Item Index} & \textbf{Tag Name} & \textbf{Value1} & \textbf{Value2} & \textbf{Value3} & \textbf{Notes Descriptions} \\
+\hline
+A & a & u & x & 1 & note1 \\
+\hline
+B & b & v & y & 2 & note2 \\
+\hline
+C & c & w & z & 3 & note3 \\
+\hline
+\end{longtable}
+
+\twocolumngrid
+\section{Conclusion}
+\paragraph{Conclusion1}
+This is conclusion1.
+
+\paragraph{Conclusion2}
+This is conclusion2.
+
+\begin{acknowledgments}
+Author1 thanks to Author2 and Author3.
+\end{acknowledgments}
+
+\bibliographystyle{apsrev} % apsrev, apsrmp, abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
+\bibliography{citation1.bib}
+
+\onecolumngrid
+\newpage
+
+\appendix
+\section*{Appendix1}
+This is appendix1.
+
+\section*{Appendix2}
+This is appendix2.
+
+\end{document}

@@ -75,7 +75,7 @@ A numbered equation:
 F=U-TS
 \end{equation}
 
-A unnumbered equation:
+An unnumbered equation:
 \[H=T+V\]
 
 Multiple equations:
@@ -93,14 +93,18 @@ This is a long equation:
 This is for method2. This is online citation \onlinecite{PhysRevLett.99.077601}. 
 
 \section{Results \& Discussion}
-This is reaults and discussion. 
-Here is a long table:
+\subsection{Result1}
+This is result1.
+
+\subsection{Result2}
+This is result2.
+Here is a long table: (switch to one-column)
 \onecolumngrid
 \begin{longtable}{c | c | c | c | c | c}
 \caption{This is a table.}
 \label{tab:table1}\\
 \hline
-\textbf{Item Index} & \textbf{Tag Name} & \textbf{Value1} & \textbf{Value2} & \textbf{Value3} & \textbf{Notes Descriptions} \\
+\textbf{Item Index} & \textbf{Tag Name} & \textbf{Value1} & \textbf{Value2} & \textbf{Value3} & \textbf{Descriptions} \\
 \hline
 A & a & u & x & 1 & note1 \\
 \hline
@@ -109,8 +113,12 @@ B & b & v & y & 2 & note2 \\
 C & c & w & z & 3 & note3 \\
 \hline
 \end{longtable}
-
 \twocolumngrid
+(switch back to two-column)
+
+\subsection{Discussion}
+This is discussion.
+
 \section{Conclusion}
 \paragraph{Conclusion1}
 This is conclusion1.

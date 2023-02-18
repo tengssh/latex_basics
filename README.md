@@ -6,6 +6,7 @@
 - [Appendix & Bibliography](README.md#appendix--bibliography)
 - [Presentation](README.md#presentation)
 - [Poster](README.md#poster)
+- [Journals](README.md#journals)
 - [LaTeX packages](README.md#latex-packages)
 - [Examples](README.md#examples)
 - [References](README.md#references)

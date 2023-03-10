@@ -34,6 +34,7 @@
 - Texts
   - `text{}`: normal text
   - `textbf{}`: bold
+  - `~`: a non-breaking space between texts (e.g. 3.5~mm)
 - Table of contents
   - `\tableofcontents`
     - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5

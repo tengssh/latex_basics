@@ -4,20 +4,23 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=red, citecolor=green, filecolor=cyan, urlcolor=blue}
 \usepackage{cleveref}
+\usepackage{makeidx}
+\makeindex
 
 \begin{document}
-This is a bibtex citation \cite{PhysRevB.78.104104}.
+This is a bibtex\index{bibtex} citation \cite{PhysRevB.78.104104}.
 To include the reference without citing use nocite. \nocite{PhysRevLett.99.077601}
 Sometimes, you need to modify the title field manually \cite{PhysRevB.82.134106_original}, because it may not be displayed correctly \cite{PhysRevB.82.134106_modified}. 
 
-This is a footnote\footnote{\label{footnote1}supplementary information}
+This is a footnote\index{footnote}\footnote{\label{footnote1}supplementary information}
 \newpage
 To refer to a footnote, using this \ref{footnote1}, and using this \vref{footnote1} when the thing referred to is on a different page. The first letter can be modified using \cref{footnote1} and \Cref{footnote1}. \\
-This is the url to \url{https://journals.aps.org/prb/}. \\
+This is the url\index{url} to \url{https://journals.aps.org/prb/}. \\
 The comparison between these packages can be seen on this \href{https://tex.stackexchange.com/questions/83037/difference-between-ref-varioref-and-cleveref-decision-for-a-thesis}{page}.
 
 \bibliographystyle{unsrt} % abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
 \bibliography{citation1}
 %\bibliography{citation1.bib} 
 %\bibliography{citation2.bibtex} 
+\printindex
 \end{document}

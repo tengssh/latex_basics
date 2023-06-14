@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{blindtext}
+\usepackage{wrapfig}
 
 \begin{document}
 \begin{figure}[h!]
@@ -116,5 +118,15 @@ Increase the heights of subfigures, then the vertical positions can also be chan
   \label{fig:LaTeX5}
 \end{figure}
 Use ContinuedFloat to have a page break in the middle of the subfigures.
+
+\newpage
+
+\blindtext
+
+\begin{wrapfigure}{i}{0pt}
+    \includegraphics[width=0.25\textwidth]{LaTeX.png}
+    \caption{text-flow-around figure}
+\end{wrapfigure}
+\blindtext
 
 \end{document}

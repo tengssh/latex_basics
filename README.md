@@ -34,6 +34,8 @@
   - `\today`
 - `\author{}`
 - `\newpage`
+- `\pagestyle{STYLE}`, `\thispagestyle{STYLE}`
+  - empty, plain, headings, myheadings, fancy
 - `\pagenumbering{}`
   - gobble, arabic, roman
 - Texts

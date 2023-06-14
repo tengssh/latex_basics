@@ -81,6 +81,11 @@
     - height: strech the height of the subfigure (e.g. 10pt, 1cm)
     - inner-pos: t (top), c (center), b (bottom), s (stretch)
     - width: width of the subfigure
+  - `\begin{wrapfigure}[nline]{pos}[overhang]{width}` (if `\usepackage{wrapfig}`)
+    - nline: number of narrow lines (e.g. 12)
+    - pos: R/r (right), L/l (left), I/i (inside), O/o (outside) [float/no]
+    - overhang: overhang of the figure (0pt, default)
+    - width: width of the figure
   - `\includegraphics[width=SIZE\textwidth]{FIGURE_PATH}`
     - SIZE: 0~1 (use 0.1 less than you expect)
   - `\caption{}`
@@ -121,6 +126,8 @@
   - `\label{KEY}`
   - `\ref{KEY}`, `\subref{KEY}`, `\pageref{KEY}`, `\eqref{KEY}`
   - `\footnote{\label{FOOTNOTE_LABEL} CONTENT}`, this footnote can be referred by using `\ref{FOOTNOTE_LABEL}`
+  - `\index{KEY}` (if `\usepackage{makeidx}`)
+    - `\makeindex`, `\printindex`
   - `usepackage{hyperref}`
     - `\hyperref[KEY]{TEXT}` & `\hypertarget{KEY}{TEXT}`
     - `\url{URL}`, `\href{URL}{TEXT}`, `href{mailto:EMAIL}{TEXT}`, `\href{run:PATH/FILE}{TEXT}`
@@ -252,13 +259,18 @@
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
+  - `inputenc`: input encodings
+  - `fontenc`: font encodings
   - `geometry`: for page formatting, please refer to [geometry](https://ctan.org/pkg/geometry) document for more details.
+  - `parskip`: change the spacing between paragraphs
   - `setspace`: change the spacing for table of contents by using `\singlespacing`, `\doublespacing`
+  - `babel`: multilingual support
   - `amsmath`:
     - equation numbering can be removed when using `begin{equation*} x=y end{equation*}` or `\nonumber` at the end of the equation
     - adding text in the equation with `\text{TEXT}`, `\mbox{TEXT}`
   - `graphicx`: for `figure` environment
   - `subcaption`: for `subfigure` environment
+  - `wrapfig`: for figures which text can flow around
   - `booktabs`: for `tabular` environment, `\hline` can be replaced by `\toprule`, `\midrule` and `\bottomrule`
   - `tikz`: for drawing, please visit [TIKZ Blog](https://latexdraw.com/) for more examples
   - `circuitikz`: for drawing circuit diagram
@@ -273,6 +285,7 @@
   - `hyperref`: for hyperlinks
   - `varioref`: for cross-referencing on a different page
   - `cleveref`: for cross-referencing with automatic formatting
+  - `makeidx`: for creating indexes
   - `enumitem`: for changing the bullet point symbol
   - `pifont`: for more bullet point styles, more symbols can be found in the [manual](https://ctan.org/pkg/pifont)
   - `blindtext`: generate dummy text

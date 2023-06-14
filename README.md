@@ -12,9 +12,14 @@
 - [References](README.md#references)
 
 ## LaTeX basics
-- LaTeX commands: `\command{option}`
+- LaTeX commands: `\command[option,...]{argument}`
+- [10 special characters](https://texblog.net/help/latex/ltx-164.html): `# $ % & ~ _ ^ \ { }`
 - `\documentclass{}`: layout of the document
-  - article, book, beamer
+  - **Basic**: article, book, report, letter, slides, beamer
+  - **American Mathematical Society (AMS)**: amsbook, amsarticle
+  - **KOMA-Script**: scrartcl, scrbook, scrreprt, scrlttr2
+  - **Book**: tufte-book
+  - **[Journals](README.md#journals)**: revtex4-2
 - `\begin{}`, `\end{}`: define an environment
   ```latex
   \begin{document}
@@ -35,21 +40,24 @@
   - `text{}`: normal text
   - `textbf{}`: bold
   - `~`: a non-breaking space between texts (e.g. 3.5~mm)
+  - `\\`: line break
+  - `\verb|LaTeX-COMMAND|`, `\begin{verbatim}LaTeX-COMMAND\end{verbatim}`: display LaTeX commands
 - Table of contents
   - `\tableofcontents`
     - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
     - Specify individually before each section: `\addtocontents{toc}{\setcounter{tocdepth}{3}}`
   - `\listoffigures`, `\listoftables`
-- Sections: `\section{}`, `\subsection{}`, `\subsubsection{}`
+- Sections: `\section{}`, `\subsection{}`, `\subsubsection{}`, `\section*{WITHOUT NUMBERING}`
 - Paragraphs: `\paragraph{}`, `\subparagraph{}`
 
 ## Math
-- Math environments: `$INLINE_FORMULA$`, `\(INLINE_FORMULA\)`, `equation`, `align`
+- Math environments: `$INLINE_FORMULA$`, `\(INLINE_FORMULA\)`, `equation`, `align`, `subequations`
   - use asterisk (e.g. `equation*`, `align*`) to turn-off auto numbering
   - math symbols
     - https://latex-tutorial.com/symbols/math-symbols/
     - most math symbols have to be used in the math environments
   - `\left`, `\right`: scale up the bracket symbol after it
+  - `\intertext{TEXT}`: text within equations
   - Partitioned statements (with `amsmath` package):
     ```latex
     \[
@@ -109,7 +117,7 @@
   - `\begin{appendix}`
 - Referencing
   - `\label{KEY}`
-  - `\ref{KEY}`, `\subref{KEY}`, `\pageref{KEY}`
+  - `\ref{KEY}`, `\subref{KEY}`, `\pageref{KEY}`, `\eqref{KEY}`
   - `\footnote{\label{FOOTNOTE_LABEL} CONTENT}`, this footnote can be referred by using `\ref{FOOTNOTE_LABEL}`
   - `usepackage{hyperref}`
     - `\hyperref[KEY]{TEXT}` & `\hypertarget{KEY}{TEXT}`
@@ -125,7 +133,7 @@
     \bibliographystyle{unsrt} % abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
     \bibliography{bib_file1.bib, bib_file2.bib, ...}
     ```
-    - `\cite{ReferenceKey}`, `\nocite{ReferenceKey}`
+    - `\cite{ReferenceKey}`, `\nocite{ReferenceKey}`, `\nocite{*}`
   - biblatex
     - in the preamble
       ```latex

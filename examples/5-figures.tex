@@ -3,6 +3,8 @@
 \usepackage{subcaption}
 \usepackage{blindtext}
 \usepackage{wrapfig}
+\usepackage{overpic}
+\usepackage{xcolor}
 
 \begin{document}
 \begin{figure}[h!]
@@ -127,6 +129,39 @@ Use ContinuedFloat to have a page break in the middle of the subfigures.
     \includegraphics[width=0.25\textwidth]{LaTeX.png}
     \caption{text-flow-around figure}
 \end{wrapfigure}
+
 \blindtext
+
+\begin{figure}[h!]
+  \centering
+  \begin{overpic}[grid,width=.3\linewidth]{LaTeX.png}
+  		\put(0,42){\large \textbf{(a)}}
+	\end{overpic}
+	\begin{overpic}[width=.3\linewidth]{LaTeX.png}
+  		\put(45,42){\large \textbf{(b)}}
+	\end{overpic}
+	\begin{overpic}[width=.3\linewidth]{LaTeX.png}
+  		\put(90,42){\large \textbf{(c)}}
+	\end{overpic}
+  \caption{overpic example}
+  \label{fig:overpic}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\resizebox{\linewidth}{!}{
+	\begin{Overpic}[abs,grid]{\begin{tabular}{p{.9\textwidth}}\vspace{1.5cm}\\\end{tabular}}
+		\put(0,0){\includegraphics[height=1.5cm]{LaTeX.png}}
+		\put(0,42){(a)}
+		\put(110,0){\includegraphics[height=1.5cm]{LaTeX.png}}
+		\put(165,42){(b)}
+		\put(220,0){\includegraphics[height=1.5cm]{LaTeX.png}}
+		\put(300,0){\color{blue}{\rule{0.5cm}{0.25cm}}}
+		\put(310,42){(c)}
+	\end{Overpic}
+	}
+  \caption{Overpic example}
+  \label{fig:Overpic}
+\end{figure}
 
 \end{document}

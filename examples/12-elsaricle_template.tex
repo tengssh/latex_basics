@@ -1,0 +1,166 @@
+\documentclass[
+preprint, % preprint, nopreprintline, review
+10pt,
+oneside,
+onecolumn, 1p,
+%twocolumn, 3p, %5p
+authoryear, % authoryear, number, sort&compress
+%longtitle,
+times,
+]{elsarticle}
+\journal{Elsevier Journal}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+\newtheorem{thm}{Theorem}
+\newdefinition{rmk}{Remark}
+\newproof{pf}{Proof}
+
+\begin{document}
+\begin{frontmatter}
+\title{Title\tnoteref{t1,t2}}
+\tnotetext[t1]{title footnote 1}
+\tnotetext[t2]{title footnote 2}
+
+\author[1]{Name1\corref{cor1}\fnref{fn1}}
+\author[2]{Name2\fnref{fn2}}
+\author[1]{Name3}
+\ead{author3@email}
+\ead[url]{www.author3-website.com}
+
+\cortext[cor1]{Corresponding author}
+\fntext[fn1]{1st author footnote}
+\fntext[fn2]{2nd author footnote}
+
+\affiliation[1]{organization={Affiliation1},
+								 addressline={Street1},
+								 postcode={101 ONE},
+								 citey={City1},
+								 country={Country1}}
+\affiliation[2]{organization={Affiliation2},
+								 addressline={Street2},
+								 postcode={102 TWO},
+								 citey={City2},
+								 country={Country2}}
+\date{\today}
+
+\begin{abstract}
+This is a structured abstract.
+\begin{description}
+\item[Background] Why?
+\item[Purpose] Why did you do it?
+\item[Method] How did you do it?
+\item[Results] What did you do and what did you find out?
+\item[Conclusions] What does that mean?
+\end{description}
+\end{abstract}
+
+\begin{graphicalabstract}
+	\includegraphics{LaTeX.png}
+\end{graphicalabstract}
+
+\begin{highlights}
+\item Highlight1
+\item Highlight2
+\item Highlight3
+\end{highlights}
+
+\begin{keyword}
+Keyword1 \sep Keyword2 \sep Keyword3
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+\begin{quotation}
+This is a quotation.
+\end{quotation}
+This is introduction. Here is a citation \cite{PhysRevB.78.104104}.
+
+\section{Methods}
+\subsection{Method1}
+This is for method1. An inline equation $1+1\geq2$.
+A numbered equation:
+\begin{equation}
+F=U-TS
+\end{equation}
+
+An unnumbered equation:
+\[H=T+V\]
+
+Multiple equations:
+\begin{eqnarray}
+\Phi=\frac{1}{c}e^{-ikx}\\
+|\Phi|^2=1
+\end{eqnarray}
+
+This is a theorem:
+\begin{thm}
+\[(1-x)^n=1-nx+\frac{1}{2}(n-1)nx^2-\frac{1}{6}((n-2)(n-1)n)x^3+...\]
+\end{thm}
+
+\subsection{Method2}
+This is for method2. This is citation in \citet{PhysRevLett.99.077601} and \citep[e.g.][p. 1]{PhysRevLett.99.077601}. 
+
+\begin{rmk}
+This is a remark.
+\end{rmk}
+
+\begin{pf}
+This is a proof.
+\end{pf}
+
+\section{Results \& Discussion}
+\subsection{Result1}
+This is result1.
+\begin{enumerate}[(Res. 1.)]
+\item This is result1.1
+\item This is result1.2
+\end{enumerate}
+
+\subsection{Result2}
+This is result2.
+Here is a long table: (singlecolumn only)
+\begin{longtable}{c | c | c | c | c | c}
+\caption{This is a table.}
+\label{tab:table1}\\
+\hline
+\textbf{Item Index} & \textbf{Tag Name} & \textbf{Value1} & \textbf{Value2} & \textbf{Value3} & \textbf{Descriptions} \\
+\hline
+A & a & u & x & 1 & note1 \\
+\hline
+B & b & v & y & 2 & note2 \\
+\hline
+C & c & w & z & 3 & note3 \\
+\hline
+\end{longtable}
+
+\subsection{Discussion}
+This is discussion.
+
+\section{Conclusion}
+\paragraph{Conclusion1}
+This is conclusion1.
+
+\paragraph{Conclusion2}
+This is conclusion2.
+
+%\begin{acknowledgments}
+Author1 thanks to Author2 and Author3.
+%\end{acknowledgments}
+
+\bibliographystyle{apsrev} % apsrev, apsrmp, abbrv, alpha, acm, apalike, ieeetr, plain, unsrt
+\bibliography{citation1.bib}
+
+%\onecolumngrid
+\newpage
+
+\appendix
+\section*{Appendix1}
+This is appendix1.
+
+\section*{Appendix2}
+This is appendix2.
+
+\end{document}

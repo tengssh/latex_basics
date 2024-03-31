@@ -19,7 +19,7 @@
   - **American Mathematical Society (AMS)**: amsbook, amsarticle
   - **KOMA-Script**: scrartcl, scrbook, scrreprt, scrlttr2
   - **Book**: tufte-book
-  - **[Journals](README.md#journals)**: revtex4-2
+  - **[Journals](README.md#journals)**: revtex4-2, elsarticle
 - `\begin{}`, `\end{}`: define an environment
   ```latex
   \begin{document}
@@ -118,6 +118,7 @@
   - To change the bullet point symbol
     - `\item[?]`
     - `usepackage{enumitem}`, `usepackage{pifont}`
+- [LaTeX tables generator](https://www.tablesgenerator.com/)
  
  ## Appendix & Bibliography
 - Appendix environment
@@ -255,6 +256,12 @@
     - [PDF][APS Author Guide for REVTEX 4.2](https://ctan.math.illinois.edu/macros/latex/contrib/revtex/auguide/auguide4-2.pdf)
     - [PDF][Author's Guide to AIP Substyles for REVTEX 4.2](https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/revtex/aip/aipguide4-2.pdf)
     - [PDF][REVTEX 4.2 Command and Options Summary](https://ctan.math.illinois.edu/macros/latex/contrib/revtex/auguide/summary4-2.pdf)
+- [Elsvier article](https://www.elsevier.com/researcher/author/policies-and-guidelines/latex-instructions)
+  - Package: https://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle
+  - Usage: `\documentclass[OPTIONS]{elsarticle}`
+  - Documentation:
+    - [PDF][elsarticle.cls documentation](https://assets.ctfassets.net/o78em1y1w4i4/3ro3yQff1q67JHmLi1sAqV/1348e3852f277867230fc4b84a801734/elsdoc-1.pdf)
+    - [Elsarticle.cls template](https://support.stmdocs.in/wiki/index.php?title=Elsarticle.cls)
 
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
@@ -290,6 +297,8 @@
   - `pifont`: for more bullet point styles, more symbols can be found in the [manual](https://ctan.org/pkg/pifont)
   - `blindtext`: generate dummy text
   - `beamer` & `beamerposter`: for presentations & posters
+  - `xcolor`: using named colors, please refer to [manual](https://ctan.joethei.xyz/macros/latex/contrib/xcolor/xcolor.pdf) for more details
+  - `overpic`: picture environment for overlaying figures and annotations, please refer to [manual](https://ctan.org/pkg/overpic) for more details
 
 ## Examples
 - first_latex ([tex](/examples/1-first_latex.tex), [pdf](/examples/1-first_latex.pdf))
@@ -303,6 +312,7 @@
 - presentation ([tex](/examples/9-presentation.tex), [pdf](/examples/9-presentation.pdf))
 - poster ([tex-tikz](/examples/10a-tikzposter.tex), [pdf-tikz](/examples/10a-tikzposter.pdf); [tex-beamer](/examples/10b-beamerposter.tex), [pdf-beamer](/examples/10b-beamerposter.pdf))
 - revtex ([tex](/examples/11-revtex_template.tex), [pdf](/examples/11-revtex_template.pdf))
+- elsarticle ([tex](/examples/12-elsarticle_template.tex), [pdf](/examples/12-elsarticle_template.pdf))
 
 ## References
 - https://latex-tutorial.com/tutorials/

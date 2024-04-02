@@ -94,6 +94,7 @@
   - `\hfill`: make one figure left-align and the other right-align, then fill spaces to produce a rubber length (same as `\hspace\fill`)
   - `\hspace{L cm}`: L can be a positive or negative value.
   - `\ContinuedFloat`: preserve the numbering from the previous subfigures
+- Set path to figure folder: `\graphicspath{{FOLDER_PATH1}{FOLDER_PATH2}...}`
  
  ## Table & List
 - Table environment

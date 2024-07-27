@@ -313,6 +313,7 @@
   - `beamer` & `beamerposter`: for presentations & posters
   - `xcolor`: using named colors, please refer to [manual](https://ctan.joethei.xyz/macros/latex/contrib/xcolor/xcolor.pdf) for more details
   - `overpic`: picture environment for overlaying figures and annotations, please refer to [manual](https://ctan.org/pkg/overpic) for more details
+  - `fancyhdr`: page headers and footers, more details in [manual](https://ctan.org/pkg/fancyhdr)
 
 ## Examples
 - first_latex ([tex](/examples/1-first_latex.tex), [pdf](/examples/1-first_latex.pdf))

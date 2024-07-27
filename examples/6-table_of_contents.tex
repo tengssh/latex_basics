@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[twoside, titlepage]{article}
 \setcounter{tocdepth}{1} % Show sections
 %\setcounter{tocdepth}{2} % + subsections
 %\setcounter{tocdepth}{3} % + subsubsections (default)
@@ -9,7 +9,24 @@
 \usepackage{pifont}
 \usepackage{enumitem}
 
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headruleskip}{2mm}
+\renewcommand{\footruleskip}{4pt}
+
+\title{LaTeX document}
+
 \begin{document}
+\maketitle
+
+\pagestyle{fancy}
+\fancyhf{} % \fancyhead{}+\fancyfoot{}
+\fancyhf[OHL]{\leftmark} % Odd+Header+Left
+\fancyhf[EHR]{\rightmark} % Even+Header+Right
+\fancyhf[FC]{\leftmark} % Footer+Center
+\fancyfoot[R]{\thepage} % Right
+
 \tableofcontents
 \newpage
 
@@ -76,6 +93,8 @@ Dummy text
 \end{enumerate}
 \newpage
 
+\thispagestyle{plain}
+
 \section{Tables}
 \paragraph{Table}
 \begin{table}[h!]
@@ -102,6 +121,10 @@ Dummy text
 \begin{table}
   \caption{Dummy table}
 \end{table}
+
+\newpage\thispagestyle{empty}
+
+\section{Empty}
 \newpage
 
 \begin{appendix}

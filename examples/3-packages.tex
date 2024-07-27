@@ -53,6 +53,8 @@ tabsize=4,
 %\addbibresource{citation2.bibtex} % the file extension has to be .bib instead of .bibtex
 \usepackage{hyperref}
 
+\usepackage{lipsum} % for dummy text
+
 \title{LaTeX packages}
 \date{\today}
 
@@ -299,6 +301,12 @@ def hello_world(text=''):
 \section{Citations \& Hyperlinks}
 These are citations \autocite[2]{PhysRevB.78.104104} and \textcite[1]{PhysRevLett.99.077601} using biblatex.
 Using hyperlinks like \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.78.104104}{this} or \url{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.78.104104}.
+
+\lipsum[1]
+
+\lipsum[2]
+
+\lipsum[3]
 \newpage
 
 \printbibliography

@@ -14,12 +14,23 @@
 ## LaTeX basics
 - LaTeX commands: `\command[option,...]{argument}`
 - [10 special characters](https://texblog.net/help/latex/ltx-164.html): `# $ % & ~ _ ^ \ { }`
-- `\documentclass{}`: layout of the document
-  - **Basic**: article, book, report, letter, slides, beamer
-  - **American Mathematical Society (AMS)**: amsbook, amsarticle
-  - **KOMA-Script**: scrartcl, scrbook, scrreprt, scrlttr2
-  - **Book**: tufte-book
-  - **[Journals](README.md#journals)**: revtex4-2, elsarticle
+- `\documentclass[OPTIONS]{CLASS}`: layout of the document
+  - CLASS
+    - **Basic**: article, book, report, letter, slides, beamer
+    - **American Mathematical Society (AMS)**: amsbook, amsarticle
+    - **KOMA-Script**: scrartcl, scrbook, scrreprt, scrlttr2
+    - **Book**: tufte-book
+    - **[Journals](README.md#journals)**: revtex4-2, elsarticle
+  - OPTIONS
+    - letterpaper, a4paper
+    - 10pt, 11pt, 12pt
+    - fleqn, leqno
+    - titlepage, notitlepage
+    - oneside, twoside
+    - onecolumn, twocolumn
+    - landscape
+    - openright, openany
+    - draft, final
 - `\begin{}`, `\end{}`: define an environment
   ```latex
   \begin{document}

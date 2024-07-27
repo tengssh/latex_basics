@@ -60,6 +60,8 @@
     - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
     - Specify individually before each section: `\addtocontents{toc}{\setcounter{tocdepth}{3}}`
   - `\listoffigures`, `\listoftables`
+- `\part{}`
+- `\chapter{}` (only books and reports)
 - Sections: `\section{}`, `\subsection{}`, `\subsubsection{}`, `\section*{WITHOUT NUMBERING}`
 - Paragraphs: `\paragraph{}`, `\subparagraph{}`
 

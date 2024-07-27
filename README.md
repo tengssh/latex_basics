@@ -307,7 +307,7 @@
   - `makeidx`: for creating indexes
   - `enumitem`: for changing the bullet point symbol
   - `pifont`: for more bullet point styles, more symbols can be found in the [manual](https://ctan.org/pkg/pifont)
-  - `blindtext`: generate dummy text
+  - `blindtext`, `lipsum`: generate dummy text
   - `beamer` & `beamerposter`: for presentations & posters
   - `xcolor`: using named colors, please refer to [manual](https://ctan.joethei.xyz/macros/latex/contrib/xcolor/xcolor.pdf) for more details
   - `overpic`: picture environment for overlaying figures and annotations, please refer to [manual](https://ctan.org/pkg/overpic) for more details

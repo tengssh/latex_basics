@@ -70,6 +70,7 @@
   - use asterisk (e.g. `equation*`, `align*`) to turn-off auto numbering
   - math symbols
     - https://latex-tutorial.com/symbols/math-symbols/
+    - https://en.wikibooks.org/wiki/LaTeX/Mathematics
     - most math symbols have to be used in the math environments
   - `\left`, `\right`: scale up the bracket symbol after it
   - `\intertext{TEXT}`: text within equations
@@ -277,6 +278,15 @@
     - [PDF][elsarticle.cls documentation](https://assets.ctfassets.net/o78em1y1w4i4/3ro3yQff1q67JHmLi1sAqV/1348e3852f277867230fc4b84a801734/elsdoc-1.pdf)
     - [Elsarticle.cls template](https://support.stmdocs.in/wiki/index.php?title=Elsarticle.cls)
 
+## Miscellaneous
+- Fonts
+  - https://en.wikibooks.org/wiki/LaTeX/Fonts
+  - https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles
+- Verbatim text
+  - `\verb|TEXT|` (`|` can be replaced with other characters), `\begin{verbatim}TEXT\end{verbatim}`
+- LaTeX symbols
+  - https://detexify.kirelabs.org/classify.html
+
 ## LaTeX packages
 - LaTeX packages: `\usepackage{PACKAGENAME}`
   - all packages must be imported at the beginning
@@ -306,7 +316,7 @@
   - `hyperref`: for hyperlinks
   - `varioref`: for cross-referencing on a different page
   - `cleveref`: for cross-referencing with automatic formatting
-  - `makeidx`: for creating indexes
+  - `makeidx`: for creating indexes, i.e. `\makeindex`
   - `enumitem`: for changing the bullet point symbol
   - `pifont`: for more bullet point styles, more symbols can be found in the [manual](https://ctan.org/pkg/pifont)
   - `blindtext`, `lipsum`: generate dummy text

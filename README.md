@@ -50,11 +50,11 @@
 - `\pagenumbering{}`
   - gobble, arabic, roman
 - Texts
-  - `text{}`: normal text
-  - `textbf{}`: bold
+  - `\text{}`: normal text
+  - `\textbf{}`: bold
   - `~`: a non-breaking space between texts (e.g. 3.5~mm)
   - `\\`: line break
-  - `\verb|LaTeX-COMMAND|`, `\begin{verbatim}LaTeX-COMMAND\end{verbatim}`: display LaTeX commands
+  - `\verb|LaTeX-COMMAND|` (`|` can be replaced with other characters), `\begin{verbatim}LaTeX-COMMAND\end{verbatim}`: display LaTeX commands
 - Table of contents
   - `\tableofcontents`
     - In preamble: `\setcounter{tocdepth}{n}`, where n = 1, 2, 3(default), 4, 5
@@ -282,8 +282,6 @@
 - Fonts
   - https://en.wikibooks.org/wiki/LaTeX/Fonts
   - https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles
-- Verbatim text
-  - `\verb|TEXT|` (`|` can be replaced with other characters), `\begin{verbatim}TEXT\end{verbatim}`
 - LaTeX symbols
   - https://detexify.kirelabs.org/classify.html
 

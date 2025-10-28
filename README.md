@@ -322,6 +322,7 @@
   - `xcolor`: using named colors, please refer to [manual](https://ctan.joethei.xyz/macros/latex/contrib/xcolor/xcolor.pdf) for more details
   - `overpic`: picture environment for overlaying figures and annotations, please refer to [manual](https://ctan.org/pkg/overpic) for more details
   - `fancyhdr`: page headers and footers, more details in [manual](https://ctan.org/pkg/fancyhdr)
+  - `datatool`, `databar`: for data processing, management, and visualization
 
 ## Examples
 - first_latex ([tex](/examples/1-first_latex.tex), [pdf](/examples/1-first_latex.pdf))
@@ -345,4 +346,5 @@
 - https://www.overleaf.com/learn/latex/Posters
 - https://en.wikibooks.org/wiki/LaTeX
 - https://ctan.org/
+- https://texdoc.org/index.html
 - [PDF][LaTeX: A Document Preparation System by Leslie Lamport](http://users.softlab.ntua.gr/~sivann/books/LaTeX%20-%20User%27s%20Guide%20and%20Reference%20Manual-lamport94.pdf)
